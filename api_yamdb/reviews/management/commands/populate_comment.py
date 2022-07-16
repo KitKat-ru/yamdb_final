@@ -3,7 +3,6 @@ import os
 
 from django.apps import apps
 from django.core.management.base import BaseCommand, CommandError
-
 from reviews.models import Comment, Review
 from users.models import User
 
