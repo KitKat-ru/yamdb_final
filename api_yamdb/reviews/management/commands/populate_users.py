@@ -21,8 +21,7 @@ class Command(BaseCommand):
 
     def get_csv_file(self, filename):
         app_path = self.get_current_app_path()
-        file_path = os.path.join(app_path, "data", filename)
-        return file_path
+        return os.path.join(app_path, "data", filename)
 
     def clear_model(self):
         try:
