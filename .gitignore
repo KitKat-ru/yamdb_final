@@ -142,8 +142,12 @@ dmypy.json
 
 # Local History for Visual Studio Code
 .history/
-
+.vscode
+.vscode/
 .mypy_cache
+.env
+.venv/
+./venv/
 
 # папки со статикой и медиа
 static/
