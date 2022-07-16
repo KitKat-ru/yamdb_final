@@ -65,8 +65,8 @@ jobs:
         with:
           push: true
           tags: taeray/infra_web:latest
-          context: .
-          file: ./Dockerfile
+          context: yamdb_final
+          file: yamdb_final/api_yamdb/Dockerfile
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
