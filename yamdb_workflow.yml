@@ -63,10 +63,10 @@ jobs:
         # Пуш образа в Docker Hub
         uses: docker/build-push-action@v2
         with:
-          push: true
-          tags: taeray/infra_web:latest
           context: yamdb_final
           file: yamdb_final/api_yamdb/Dockerfile
+          push: true
+          tags: taeray/infra_web:latest
   deploy:
     runs-on: ubuntu-latest
     needs: build_and_push_to_docker_hub
