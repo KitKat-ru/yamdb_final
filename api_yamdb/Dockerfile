@@ -1,7 +1,7 @@
 # 3.7 — используемая версия Python. 
 FROM python:3.7-slim 
  
-WORKDIR /app
+WORKDIR /app/.
  
 COPY requirements.txt /app 
  
