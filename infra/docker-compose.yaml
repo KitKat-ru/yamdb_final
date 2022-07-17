@@ -10,7 +10,7 @@ services:
   
   web:
     
-    image: apikhenko/yamdb_final:latest
+    image: taeray/infra_web:latest
     
     restart: always
     
