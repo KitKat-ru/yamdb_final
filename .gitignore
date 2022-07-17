@@ -150,7 +150,7 @@ dmypy.json
 ./venv/
 
 # папки со статикой и медиа
-static/
+/static/
 posts/static/
-media/
+/media/
 
