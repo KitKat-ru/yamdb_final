@@ -9,7 +9,7 @@ services:
       - ./.env
   
   web:
-    image: taeray/infra_web:latest
+    image: taeray/yamdb_web:v.1.0
     restart: always
     volumes:
       - static_value:/app/static/
