@@ -9,11 +9,8 @@ services:
       - ./.env
   
   web:
-    
     image: taeray/infra_web:latest
-    
     restart: always
-    
     volumes:
       - static_value:/app/static/
       - media_value:/app/media/
@@ -25,12 +22,9 @@ services:
       - ./.env
   
   nginx:
-    
     image: nginx:1.21.3-alpine
-    
     ports:
       - "80:80"
-    
     volumes:
       - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
       - static_value:/var/html/static/
