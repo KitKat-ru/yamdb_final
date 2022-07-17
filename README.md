@@ -44,14 +44,17 @@
 ### Скопируйте файлы `docker-compose.yaml` и `nginx/default.conf` из вашего проекта на сервер в `home/<ваш_username>/docker-compose.yaml` и `home/<ваш_username>/nginx/default.conf` соответственно ###
 
   
-### Подготовьте ВМ. Остановите службу nginx. Установите - [Docker и Docker-compose](https://docs.docker.com/engine/install/ubuntu/). Запустите сборку образов: ###
+### Подготовьте ВМ. Остановите службу nginx. Установите - [Docker и Docker-compose](https://docs.docker.com/engine/install/ubuntu/): ###
 
     sudo apt update
     sudo apt upgrade
     sudo systemctl stop nginx
     sudo apt install docker.io
 
-### После развертывания проекта создайте миграции и заполнените базу данных: ###
+### При использовании команды `git push` запуститься `GitHub Actions` и задеплоит проект на вашу ВМ: ###
+    git add .
+    git commit -m 'you_text'
+    git push
 
 ### После развертывания проекта заходите в ВМ и создайте миграции и заполнените базу данных: ###
 
