@@ -36,6 +36,12 @@ jobs:
         # запуск проверки проекта по flake8
         python -m flake8
         pytest
+  # перейти в папку, содержащую manage.py — 
+  #<корневая_папка_infra_actions>/<папка_проекта>/manage.py
+  #cd api_yamdb/
+  # запустить написанные разработчиком тесты
+  #python manage.py test
+  # Сразу после них добавьте новую задачу: деплой приложения
   build_and_push_to_docker_hub:
     name: Push Docker image to Docker Hub
     runs-on: ubuntu-latest
@@ -54,7 +60,7 @@ jobs:
           username: ${{ secrets.LOGIN_DOCKER }}
           password: ${{ secrets.PASSWORD_DOCKER }}
       - name: Push to Docker Hub
-        # Пуш образа в Docker Hub  
+        # Пуш образа в Docker Hub
         uses: docker/build-push-action@v2
         with:
           context: api_yamdb
@@ -75,8 +81,8 @@ jobs:
         script: |
             sudo docker-compose stop
             sudo docker-compose rm web
-            touch .env
-            echo DB_ENGINE=${{ secrets.SECRET_KEY }} >> .env
+            touch /.env
+            echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
             echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
             echo DB_NAME=${{ secrets.DB_NAME }} >> .env
             echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env
