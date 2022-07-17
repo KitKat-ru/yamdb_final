@@ -90,7 +90,7 @@
 - Этот проект лицензируется в соответствии с лицензией MIT ![](https://miro.medium.com/max/156/1*A0rVKDO9tEFamc-Gqt7oEA.png "1")
 
 ## Образ выложен на DockerHub, что бы его скачать введите:
-    sudo docker pull taeray/infra_web:v.1.2
+    sudo docker pull taeray/taeray/yamdb_web:v.1.0
 
 
 ## Плашка о прохождении `workflow`:
