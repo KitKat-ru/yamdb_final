@@ -78,9 +78,9 @@
 5. При желании пользователь отправляет PATCH-запрос на эндпоинт `/api/v1/users/me/` и заполняет поля в своём профайле.  
 
 ### Для тестирования можно обратиться по `URL`:
-    http://51.250.97.9/api/v1/
-    http://51.250.97.9/admin/
-    http://51.250.97.9/redoc/
+    http://<IP-adress VM>/api/v1/
+    http://<IP-adress VM>/admin/
+    http://<IP-adress VM>/redoc/
 
 ### Автор:
 
